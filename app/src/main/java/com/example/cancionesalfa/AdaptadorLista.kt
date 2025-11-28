@@ -31,12 +31,12 @@ class AdaptadorLista(
 
     override fun onBindViewHolder(holder: CreadorItems, position: Int) {
 
-        val cancion = RepositorioSingleton.getInstancia().repo.elemento(position)
-        holder.titulo.text = cancion.titulo
-        holder.album.text = cancion.album
-        holder.descripcion.text = cancion.descripcion
-        val draw = AppCompatResources.getDrawable(contexto,cancion.getImagen())
-        holder.portada.setImageResource(cancion.getImagen())
+        val can = RepositorioSingleton.getInstancia().repo.elemento(position)
+        holder.titulo.text = can.titulo
+        holder.album.text = can.album
+        holder.descripcion.text = can.descripcion
+        val draw = AppCompatResources.getDrawable(contexto,can.getImagen())
+        holder.portada.setImageDrawable(draw)
 
 
     }
@@ -57,7 +57,7 @@ class AdaptadorLista(
             val layout = itemView.findViewById<LinearLayout>(R.id.layout_elemento)
             layout.setOnClickListener {
                 val posicion = bindingAdapterPosition
-                controlador.VistaCancion(posicion)
+                controlador.lanzarCancion(posicion)
 
 
             }

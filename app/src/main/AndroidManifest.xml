@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CancionesAlfa">
         <activity
+            android:name=".AnadirCancion"
+            android:exported="false" />
+        <activity
+            android:name=".editar"
+            android:exported="false" />
+        <activity
+            android:name=".VistaCancion"
+            android:exported="false" />
+        <activity
             android:name=".ListaActivity"
             android:exported="false" />
         <activity
